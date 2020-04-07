@@ -6,9 +6,9 @@ int main(){
 	DuLinkedList L = NULL;
 	ElemType e,x;
 	int i,n,k;
-	menu();
 	do{
-		printf("请输入指令：");
+		menu();
+		printf("\n请输入指令：");
 		i = select();
 		switch(i){
 			case 1:
@@ -51,10 +51,16 @@ int main(){
 				TraverseList_DuL(L);
 				break;
 			case 0:
+				printf("END\n");
 				break;
 			default:
 				printf("\n输入有误,重新输入\n");
 		}
+		printf("\n\n");
+		if(i != 0){
+			system("pause");  //暂停
+			system("cls");  //清屏
+		} 
 	}while(i != 0);
 	return 0;
 } 

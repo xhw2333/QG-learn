@@ -8,8 +8,8 @@ int main(){
 	LinkedList L = NULL;
 	ElemType e;
 	int i,n;
-	menu();
 	do{
+		menu();
 		printf("\n请输入指令：");
 		i = select();
 		switch(i){
@@ -92,6 +92,11 @@ int main(){
 			default:
 				printf("\n输入有误,重新输入\n");
 		}
+		printf("\n\n");
+		if(i != 0){
+			system("pause");  //暂停
+			system("cls");  //清屏
+		} 
 	}while(i != 0);
 	return 0;
 } 
