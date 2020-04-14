@@ -41,6 +41,13 @@
       "unicode_decimal": 58891
     },
     {
+      "icon_id": "1118930",
+      "name": "名字",
+      "font_class": "mingzi",
+      "unicode": "e75e",
+      "unicode_decimal": 59230
+    },
+    {
       "icon_id": "1209061",
       "name": "头像 单人头像",
       "font_class": "touxiangdanrentouxiang",
@@ -67,6 +74,13 @@
       "font_class": "yousanjiaoxing",
       "unicode": "e64c",
       "unicode_decimal": 58956
+    },
+    {
+      "icon_id": "1902385",
+      "name": "邮箱",
+      "font_class": "youxiang",
+      "unicode": "e70c",
+      "unicode_decimal": 59148
     },
     {
       "icon_id": "2042966",

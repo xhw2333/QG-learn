@@ -8,17 +8,17 @@
 <body>
     <!-- 主要内容 -->
     <div id="mainContent">
-        <h1>博客登录</h1>
+        <h1>登录</h1>
         <form name="Form"action="#" target="blank" onsubmit="return mySubmit()">
             <div class="user clearfix">
                 <i class="fl">用户名</i>
                 <span class="iconfont">&#xe615;</span>
-                <input class="fr" type="text" name="username" autocomplete="off">
+                <input id="lgUsername" class="fr" type="text" name="username" autocomplete="off">
             </div>
             <div class="key clearfix">
                 <i class="fl">密码</i>
                 <span class="iconfont">&#xe613;</span>
-                <input class="fr" type="password" name="password">
+                <input id="lgPassword" class="fr" type="password" name="password" autocomplete="off">
             </div>
             <div class="select">
                 <input type="checkbox" name="select">
@@ -28,7 +28,7 @@
             </div>
             <a class="tip" href="register.html">还没注册，点击注册➡</a>
             <div class="btn">
-                <button type="submit">登录</button>
+                <button type="submit" id="lgBtn">登录</button>
             </div>
         </form>
         <div class="ewm clearfix">
@@ -37,6 +37,6 @@
         </div>
     </div>
     <script src="js/login.js"></script>
-    
+    <script src="js/test2.js"></script>
 </body>
 </html>

@@ -24,13 +24,14 @@ body{
 }
 #mainContent{
     width:400px;
-    height:500px;
+    height:650px;
     background-image:linear-gradient(135deg,rgba(83, 83, 198,0.5),rgba(216, 136, 236, 0.5));
     position:absolute;
     left:50%;
     top:50%;
     margin-left:-200px;
-    margin-top:-250px;
+    /* margin-top:-250px; */
+    transform: translateY(-50%);
     border-radius:5px;
 }
 #mainContent h1{
@@ -86,24 +87,70 @@ body{
     height: 25px;
     margin: 23px 20px 0 0;
 }
-#mainContent .key2{
+#mainContent .phone{
     width:400px;
     height:75px;
     line-height:75px;
     text-align:center;
 }
-#mainContent .key2 span{
+#mainContent .phone span{
     font-size:25px;
     color:#c550e2;
-    margin-right: -5px;
+    margin-left: 54px;
 }
-#mainContent .key2 i{
+#mainContent .phone i{
     font-size:25px;
     font-weight:bold;
     color:#c550e2;
     margin-left:25px;
 }
-#mainContent .key2 input{
+#mainContent .phone input{
+    width: 200px;
+    height: 25px;
+    margin: 23px 20px 0 0;
+}
+
+#mainContent .email{
+    width:400px;
+    height:75px;
+    line-height:75px;
+    text-align:center;
+}
+#mainContent .email span{
+    font-size:25px;
+    color:#c550e2;
+    margin-left: 54px;
+}
+#mainContent .email i{
+    font-size:25px;
+    font-weight:bold;
+    color:#c550e2;
+    margin-left:25px;
+}
+#mainContent .email input{
+    width: 200px;
+    height: 25px;
+    margin: 23px 20px 0 0;
+}
+
+#mainContent .name{
+    width:400px;
+    height:75px;
+    line-height:75px;
+    text-align:center;
+}
+#mainContent .name span{
+    font-size:25px;
+    color:#c550e2;
+    margin-left: 54px;
+}
+#mainContent .name i{
+    font-size:25px;
+    font-weight:bold;
+    color:#c550e2;
+    margin-left:25px;
+}
+#mainContent .name input{
     width: 200px;
     height: 25px;
     margin: 23px 20px 0 0;
