@@ -9,9 +9,19 @@
 <html>
   <head>
     <title>$Title$</title>
+    <script>
+      var u = sessionStorage.getItem("user");
+      console.log(u);
+    </script>
   </head>
   <body>
-  $END$
+  <script language="JavaScript">
+    function x() {
+      var myName = "<%=session.getAttribute("name")%>"
+      alert(name);
+    }
+  </script>
+  ${name}
 
   <br>
   成功登录

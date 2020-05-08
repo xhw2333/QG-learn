@@ -91,6 +91,11 @@ public class UserDao {
         return  0;
     }
 
+    public Ueser login(Ueser loginUser){
+
+        return null;
+    }
+
     //测试
     public static void main(String[] args) {
         int num = 6;

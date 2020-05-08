@@ -20,18 +20,25 @@
       "unicode_decimal": 58885
     },
     {
-      "icon_id": "383636",
-      "name": "右箭头",
-      "font_class": "youjiantou",
-      "unicode": "e628",
-      "unicode_decimal": 58920
-    },
-    {
       "icon_id": "469289",
       "name": "微博",
       "font_class": "weibo",
       "unicode": "e60d",
       "unicode_decimal": 58893
+    },
+    {
+      "icon_id": "766888",
+      "name": "相册",
+      "font_class": "xiangce-copy",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "1103116",
+      "name": "达人",
+      "font_class": "daren",
+      "unicode": "e6b2",
+      "unicode_decimal": 59058
     },
     {
       "icon_id": "1110411",
@@ -90,11 +97,25 @@
       "unicode_decimal": 58648
     },
     {
+      "icon_id": "2098916",
+      "name": "评论",
+      "font_class": "pinglun",
+      "unicode": "e607",
+      "unicode_decimal": 58887
+    },
+    {
       "icon_id": "2151425",
       "name": "前端",
       "font_class": "qianduan",
       "unicode": "e6c1",
       "unicode_decimal": 59073
+    },
+    {
+      "icon_id": "2175092",
+      "name": "房子",
+      "font_class": "fangzi",
+      "unicode": "e60e",
+      "unicode_decimal": 58894
     },
     {
       "icon_id": "2343913",
@@ -160,6 +181,13 @@
       "unicode_decimal": 58970
     },
     {
+      "icon_id": "4552477",
+      "name": "历史",
+      "font_class": "lishi",
+      "unicode": "e63e",
+      "unicode_decimal": 58942
+    },
+    {
       "icon_id": "5181675",
       "name": "后台",
       "font_class": "houtai",
@@ -174,11 +202,46 @@
       "unicode_decimal": 59083
     },
     {
+      "icon_id": "6149436",
+      "name": "日 历",
+      "font_class": "rili",
+      "unicode": "e64e",
+      "unicode_decimal": 58958
+    },
+    {
+      "icon_id": "6354128",
+      "name": "评论 FULL",
+      "font_class": "comment",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
       "icon_id": "6797145",
       "name": "txt",
       "font_class": "txt",
       "unicode": "e6cf",
       "unicode_decimal": 59087
+    },
+    {
+      "icon_id": "7056378",
+      "name": "转发",
+      "font_class": "forward",
+      "unicode": "e60f",
+      "unicode_decimal": 58895
+    },
+    {
+      "icon_id": "7119873",
+      "name": "转发",
+      "font_class": "zhuanfa",
+      "unicode": "e65b",
+      "unicode_decimal": 58971
+    },
+    {
+      "icon_id": "7183153",
+      "name": "应用",
+      "font_class": "yingyong",
+      "unicode": "e6a1",
+      "unicode_decimal": 59041
     },
     {
       "icon_id": "7831402",
@@ -195,11 +258,32 @@
       "unicode_decimal": 58640
     },
     {
+      "icon_id": "8290311",
+      "name": "历史浏览",
+      "font_class": "lishiliulan",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "8445085",
+      "name": "相册",
+      "font_class": "xiangce",
+      "unicode": "e680",
+      "unicode_decimal": 59008
+    },
+    {
       "icon_id": "9031084",
       "name": "影视制作",
       "font_class": "yingshizhizuo",
       "unicode": "e62f",
       "unicode_decimal": 58927
+    },
+    {
+      "icon_id": "9137747",
+      "name": "点赞",
+      "font_class": "dianzan1",
+      "unicode": "e506",
+      "unicode_decimal": 58630
     },
     {
       "icon_id": "9403928",
@@ -214,6 +298,34 @@
       "font_class": "kaoyan",
       "unicode": "e67f",
       "unicode_decimal": 59007
+    },
+    {
+      "icon_id": "9490051",
+      "name": "右箭头",
+      "font_class": "arrow-right",
+      "unicode": "e502",
+      "unicode_decimal": 58626
+    },
+    {
+      "icon_id": "9701093",
+      "name": "名师",
+      "font_class": "mingshi",
+      "unicode": "e698",
+      "unicode_decimal": 59032
+    },
+    {
+      "icon_id": "10122896",
+      "name": "心 爱心",
+      "font_class": "xinaixin",
+      "unicode": "e67d",
+      "unicode_decimal": 59005
+    },
+    {
+      "icon_id": "10156112",
+      "name": "与我相关",
+      "font_class": "yuwoxiangguan",
+      "unicode": "e608",
+      "unicode_decimal": 58888
     },
     {
       "icon_id": "10793238",
@@ -251,11 +363,25 @@
       "unicode_decimal": 58642
     },
     {
+      "icon_id": "11338603",
+      "name": "加号",
+      "font_class": "hao",
+      "unicode": "e507",
+      "unicode_decimal": 58631
+    },
+    {
+      "icon_id": "11486178",
+      "name": "技术",
+      "font_class": "jishu",
+      "unicode": "e64b",
+      "unicode_decimal": 58955
+    },
+    {
       "icon_id": "11535094",
       "name": "拍照 照片",
       "font_class": "lunkuodasan-",
-      "unicode": "e507",
-      "unicode_decimal": 58631
+      "unicode": "e508",
+      "unicode_decimal": 58632
     },
     {
       "icon_id": "11749468",
@@ -268,8 +394,8 @@
       "icon_id": "11984859",
       "name": "三杠",
       "font_class": "sangang",
-      "unicode": "e6a1",
-      "unicode_decimal": 59041
+      "unicode": "e6a2",
+      "unicode_decimal": 59042
     },
     {
       "icon_id": "12198058",
@@ -296,8 +422,8 @@
       "icon_id": "12942268",
       "name": "手机",
       "font_class": "shouji",
-      "unicode": "e60e",
-      "unicode_decimal": 58894
+      "unicode": "e611",
+      "unicode_decimal": 58897
     },
     {
       "icon_id": "13069008",
@@ -305,6 +431,13 @@
       "font_class": "shipin",
       "unicode": "e6fc",
       "unicode_decimal": 59132
+    },
+    {
+      "icon_id": "13170965",
+      "name": "衣服",
+      "font_class": "yifu",
+      "unicode": "e69b",
+      "unicode_decimal": 59035
     },
     {
       "icon_id": "13210228",
@@ -342,11 +475,39 @@
       "unicode_decimal": 59000
     },
     {
+      "icon_id": "13602549",
+      "name": "双人",
+      "font_class": "shuangren",
+      "unicode": "e633",
+      "unicode_decimal": 58931
+    },
+    {
+      "icon_id": "13628344",
+      "name": "交流会",
+      "font_class": "jiaoliuhui",
+      "unicode": "e609",
+      "unicode_decimal": 58889
+    },
+    {
       "icon_id": "13636488",
       "name": "时间",
       "font_class": "shijian",
       "unicode": "e63f",
       "unicode_decimal": 58943
+    },
+    {
+      "icon_id": "14193213",
+      "name": "游戏",
+      "font_class": "youxi",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
+      "icon_id": "14446110",
+      "name": "日 历",
+      "font_class": "rili1",
+      "unicode": "e647",
+      "unicode_decimal": 58951
     }
   ]
 }
