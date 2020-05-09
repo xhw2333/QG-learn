@@ -7,23 +7,24 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-  <head>
+<head>
     <title>$Title$</title>
     <script>
-      var u = sessionStorage.getItem("user");
-      console.log(u);
+        var u = sessionStorage.getItem("user");
+        console.log(u);
     </script>
-  </head>
-  <body>
-  <script language="JavaScript">
+</head>
+<body>
+<script language="JavaScript">
     function x() {
-      var myName = "<%=session.getAttribute("name")%>"
-      alert(name);
+        var myName = "<%=session.getAttribute("name")%>"
+        alert(name);
     }
-  </script>
-  ${name}
+</script>
+${name}
 
-  <br>
-  成功登录
-  </body>
+<br>
+成功登录
+</body>
 </html>
+

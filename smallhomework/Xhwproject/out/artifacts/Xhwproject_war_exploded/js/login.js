@@ -41,3 +41,11 @@ lgPassword.oninput= function() {
         passage.innerHTML = ("");
     }
 }
+
+lgBtn.onclick = function () {
+    if(lgUsername.value == null || lgUsername.value == "") {
+        passage.innerHTML=("请输入用户名!!");
+    } else if(lgPassword.value == null || lgPassword.value == "") {
+        passage.innerHTML=("请输入密码!!");
+    }
+}

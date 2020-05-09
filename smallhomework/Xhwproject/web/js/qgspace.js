@@ -91,7 +91,7 @@ record.onclick = function() {
 function play() {
     timer = setInterval(function(){
         rBtn.onclick();
-    },4000);
+    },3000);
 }
 
 //停止播放
@@ -193,3 +193,71 @@ for(var i = 0, len = show.length; i < len; i++){
         }
     }
 }
+
+
+// 懒加载
+window.onload = function(){
+    // 获取图片列表，即img标签列表
+    var imgs = document.querySelectorAll('img');
+
+
+
+    // 获取到浏览器顶部的距离
+    function getTop(e){
+        return e.offsetTop;
+    }
+
+    // 懒加载实现
+    function lazyload(imgs){
+        // 可视区域高度
+        var h = window.innerHeight;
+        //滚动区域高度
+        var s = document.documentElement.scrollTop || document.body.scrollTop;
+        for(var i = 0;i < imgs.length; i++){
+
+            //图片距离顶部的距离大于可视区域和滚动区域之和时懒加载
+            if ((h + s) > getTop(imgs[i])) {
+                // 1秒后执行
+                (function(i){
+                    setTimeout(function(){
+                        //判断是否已加载
+                        // if(imgs[i].src == null ) {
+                            // 隐形加载图片或其他资源，
+                            //创建一个临时图片，这个图片在内存中不会到页面上去。实现隐形加载
+                            var temp = new Image();
+                            //只会请求一次
+                            temp.src = imgs[i].getAttribute('data-src');
+                            // onload判断图片加载完毕，真是图片加载完毕，再赋值给dom节点
+                            temp.onload = function () {
+                                //适配轮播图
+
+                                // 获取自定义属性data-src，用真图片替换假图片
+                                imgs[i].src = imgs[i].getAttribute('data-src');
+                            }
+                        // }
+                    },1000)
+                })(i)
+            }
+        }
+    }
+    lazyload(imgs);
+
+    // 滚屏函数
+    window.onscroll =function(){
+        lazyload(imgs);
+        //防止轮播图与点出现不对应
+        num = 1;
+        clearName(point);
+        point[num-1].className = "active";
+    }
+}
+
+
+
+
+
+
+
+
+
+
