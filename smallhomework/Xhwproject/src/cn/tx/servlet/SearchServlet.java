@@ -25,7 +25,7 @@ public class SearchServlet extends HttpServlet {
 
 
         String key = req.getParameter("key");
-        System.out.println(key);
+//        System.out.println(key);
 
         Diary diary = new Diary();
         List<Diary> list = new ArrayList<Diary>();
@@ -36,12 +36,12 @@ public class SearchServlet extends HttpServlet {
             System.out.println(list.get(i));
         }
         if(diary != null){
-            System.out.println("1");
+//            System.out.println("1");
             out.println(diary);
             out.flush();
             out.close();
         } else if(list != null && !list.isEmpty()){
-            System.out.println("2");
+//            System.out.println("2");
             out.println(list);
             out.flush();
             out.close();

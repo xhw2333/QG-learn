@@ -72,8 +72,8 @@ public class Diary {
                 "id:" + id +
                 ", title:'" + title + '\'' +
                 ", tab:'" + tab + '\'' +
-                ", date:" + date +
+                ", date:'" + date + '\'' +
                 ", text:'" + text + '\'' +
-                '}';
+                "}";
     }
 }

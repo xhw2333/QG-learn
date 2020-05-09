@@ -1,6 +1,11 @@
 //获取搜索按钮
 var submit = document.getElementById("submit");
 
+//获取插入地方
+var palace = document.getElementById("Content");
+
+//获取标题
+var Sum = document.getElementById("Sum");
 
 
 submit.onclick = function () {
@@ -17,96 +22,55 @@ submit.onclick = function () {
     //onreadystatechange相当于一个事件，当服务器有响应的时候就会触发这个方法
     xml_http.onreadystatechange = function() {
         if (xml_http.readyState === 4 && xml_http.status === 200) {
-            //此时这个返回的数据是个字符串，我们需要调用JSON.parse方法把他转成js对象才能够操作\                                                                                                                                               .0
+            //此时这个返回的数据是个字符串，我们需要调用JSON.parse方法把他转成js对象才能够操作                                                                                                                                              .0
             // var result = JSON.parse(xml_http.responseText);
             //成功对应做成功的业务逻辑，失败对应做失败的业务逻辑
             var result = xml_http.responseText;
             result = eval('(' + result + ')');
-                //do something
-                console.log(result);
-                console.log(typeof (result));
-         
+            //判断传回来的是什么值
+            if(result instanceof Array){
+                createDom(result);
+                // createDom(result);
+            } else if (result instanceof Object) {
+                palace.innerHTML = getHTML(result);
+                // console.log(2);
+            } else {
+                palace.innerHTML = "无结果";
+            }
         }
     }
 }
 
+function  createDom(datalist) {
+    var htmlStr = '';
+    var len = datalist.length;
+    for(var i = 0; i < len; i++){
+        htmlStr += getHTML(datalist[i]);
+    }
+    //获取那个区域，插入
+    palace.innerHTML = htmlStr;
+}
 
 
-
-		// let con = document.getElementsByClassName('con')[0];
-
-		// // 创建ajax请求
-		// var http = new XMLHttpRequest();
-		// http.onreadystatechange = function() {
-		// 	if (http.readyState === 4 && http.status === 200) {
-		// 		let result = JSON.parse(http.responseText);
-		// 		//console.log(result)
-		// 		createDom(result);
-        //     }
-		// }
-
-		// // 创造节点
-		// function createDom(dataList) {
-		// 	let htmlStr = ''
-		// 	let len = dataList.length;
-		// 	for(let i = 0; i < len; i++) {
-		// 		htmlStr += getHtmlStr(dataList[i]);
-		// 	}
-		// 	console.log(htmlStr);
-		// 	con.innerHTML = htmlStr;
-		// }
-		// // 获取模板字符串
-
-		// function getHtmlStr(data) {
-		// 	let template = 
-		// 	`<div class="list">
-		// 		<div>
-		// 			<span class="name">id: </span>
-		// 			<span class="data">${data.id}</span>
-		// 		</div>
-		// 		<div>
-		// 			<span class="name">userId: </span>
-		// 			<span class="data">${data.userId}</span>
-		// 		</div>
-		// 		<div>
-		// 			<span class="name">title: </span>
-		// 			<span class="data">${data.title}</span>
-		// 		</div>
-		// 		<div>
-		// 			<span class="name">body: </span>
-		// 			<span class="data">${data.body}</span>
-		// 		</div>
-		// 	</div>`
-		// 	return template;
-		// }
-
-		// let btn = document.getElementById('btn');
-		// let url = "http://jsonplaceholder.typicode.com/posts";
-		// btn.onclick = function() {
-		// 	http.open('GET', url, true);
-		// 	http.send();
-		// }
+function getHTML(data) {
+    var template =
+        `<li>
+            <h5>${data.title}
+                <span>${data.tab}</span>
+            </h5>
+            <i>${data.date}</i>
+            <div>
+                  ${data.text}
+            </div>
+            <ol class="clearfix">
+                <li class="iconfont fl">&#xe506;</li>
+                <li class="iconfont fl">&#xe602;</li>
+                <li class="iconfont fl">&#xe65b;</li>
+            </ol>
+        </li>`
+        return template;
+}
 
 
-		
-		// // btn.onclick=function() {
-		// // 	let result = [
-		// // 	{
-		// // 		"postId": 1,
-		// // 		"id": 1,
-		// // 		"name": "id labore ex et quam laborum",
-		// // 		"email": "Eliseo@gardner.biz",
-		// // 		"body": "laudantium enim quasi est quidem magnam voluptate ipsam eos\ntempora quo necessitatibus\ndolor quam autem quasi\nreiciendis et nam sapiente accusantium"
-		// // 	},
-		// // 	{
-		// // 		"postId": 1,
-		// // 		"id": 2,
-		// // 		"name": "quo vero reiciendis velit similique earum",
-		// // 		"email": "Jayne_Kuhic@sydney.com",
-		// // 		"body": "est natus enim nihil est dolore omnis voluptatem numquam\net omnis occaecati quod ullam at\nvoluptatem error expedita pariatur\nnihil sint nostrum voluptatem reiciendis et"
-		// // 	},
-		// // 	]
-		// // 	createDom(result);
-		// // }
 
 

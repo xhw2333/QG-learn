@@ -100,9 +100,9 @@ public class UserDao {
     public static void main(String[] args) {
         int num = 6;
         Ueser user = new Ueser();
-        user.setUsername("xhw");
-        user.setPassword("123");
-        user.setPhone("123453678");
+        user.setUsername("baba");
+        user.setPassword("1233");
+        user.setPhone("10349958548");
         insert(user);
         num = check("hhh", "1234");
         System.out.println(num);

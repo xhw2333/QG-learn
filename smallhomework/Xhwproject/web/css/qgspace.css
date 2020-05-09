@@ -120,9 +120,8 @@
     position: absolute;
     display: none;
     left: -5px;
-    top: 32px;
-    width: 75px;
-    
+    top: 30px;
+    width: 80px;
     background-color: #fff;
     /* border-radius: 5px; */
     /* z-index: -2;
@@ -754,6 +753,10 @@
     color: #cf16cf;
     font-size: 18px;
     border-bottom: 1px dashed #cf16cf;
+}
+
+#Content {
+    margin-bottom: 200px;
 }
 
 #secondScreen .diary .all h4 em {

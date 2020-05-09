@@ -17,7 +17,7 @@ lgBtn.onclick = function () {
     //onreadystatechange相当于一个事件，当服务器有响应的时候就会触发这个方法
     xmlhttp.onreadystatechange = function() {
         if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
-            //此时这个返回的数据是个字符串，我们需要调用JSON.parse方法把他转成js对象才能够操作\                                                                                                                                               .0
+            //此时这个返回的数据是个字符串，我们需要调用JSON.parse方法把他转成js对象才能够操作                                                                                                                                               .0
             var result = xmlhttp.responseText;
             //成功对应做成功的业务逻辑，失败对应做失败的业务逻辑
             if(result == 1){

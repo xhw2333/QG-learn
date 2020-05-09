@@ -1,6 +1,7 @@
 package cn.tx.dao;
 
 import cn.tx.model.Diary;
+import jdk.nashorn.internal.objects.NativeJSON;
 
 import java.sql.*;
 import java.text.ParseException;
@@ -155,9 +156,9 @@ public class DiaryDao {
             return null;
         }
 
-
+        //测试
         public static void main(String[] args) {
-            String str = "2020-03-29";
+            String str = "2020-01-15";
             SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
             Date date = null;
             List<Diary> list = new ArrayList<Diary>();
@@ -167,20 +168,24 @@ public class DiaryDao {
                 e.printStackTrace();
             }
             Diary diary = new Diary();
-            diary.setTitle("数据结构和算法");
-            diary.setTab("学习");
+            diary.setTitle("水煮鱼");
+            diary.setTab("美食");
             diary.setDate(date);
-            diary.setText("今天开始学习数据结构和算法,B站的小甲鱼讲的挺好,十分推荐!");
-//            mwrite(diary);
-            diary = mysearch("数据结构和");
+            diary.setText("水煮鱼，很可以，“油而不腻、辣而不燥、麻而不苦、肉质滑嫩”。");
+            mwrite(diary);
+
+            diary = mysearch("数据结构和算法");
+
 //            String str1 = diary.toString();
 //            System.out.println(str1);
+
+
             if(diary == null){
                 System.out.println("no");
             }else {
                 System.out.println(diary);
             }
-            list = myprint("学习");
+//            list = myprint("学习");
             if(list == null || list.isEmpty()){
                 System.out.println("no");
             } else {
