@@ -1,0 +1,173 @@
+@import 'reset.css';
+
+@font-face {
+    font-family: 'iconfont';
+    src: url('../font/iconfont.eot');
+    src: url('../font/iconfont.eot?#iefix') format('embedded-opentype'),
+        url('../font/iconfont.woff2') format('woff2'),
+        url('../font/iconfont.woff') format('woff'),
+        url('../font/iconfont.ttf') format('truetype'),
+        url('../font/iconfont.svg#iconfont') format('svg');
+  }
+  .iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+body{
+    background-image:url(../images/night.jpg);
+    background-repeat:no-repeat;
+    background-size:100%;
+}
+#mainContent{
+    width:400px;
+    /*height:500px;*/
+    background-image:linear-gradient(135deg,rgba(83, 83, 198,0.5),rgba(216, 136, 236, 0.5));
+    position:absolute;
+    left:50%;
+    top:50%;
+    margin-left:-200px;
+    margin-top:-250px;
+    border-radius:5px;
+}
+#mainContent h1{
+    width:400px;
+    text-align:center;
+    padding:25px 0 15px;
+    color:rgb(216, 136, 236);
+    border-bottom:1px dashed rgb(216, 136, 236);
+}
+
+#mainContent .passage {
+    width: 400px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: #ff4400;
+}
+
+#mainContent .user{
+    width:400px;
+    height:100px;
+    line-height:100px;
+    text-align:center;
+}
+#mainContent .user i{
+    font-size:25px;
+    font-weight:bold;
+    color:#c550e2;
+    margin-left:35px;
+}
+#mainContent .user span{
+    font-size:25px;
+    color:#c550e2;
+}
+#mainContent .user input{
+    width:200px;
+    height:25px;
+    margin:36px 40px 0 0;
+}
+#mainContent .key{
+    width:400px;
+    height:100px;
+    line-height:100px;
+    text-align:center;
+}
+#mainContent .key span{
+    font-size:25px;
+    color:#c550e2;
+    margin-right: -25px;
+}
+#mainContent .key i{
+    font-size:25px;
+    font-weight:bold;
+    color:#c550e2;
+    margin-left:35px;
+}
+#mainContent .key input{
+    width:200px;
+    height:25px;
+    margin:36px 40px 0 0;
+}
+#mainContent .select{
+    width:400px;
+    text-align: center;
+}
+#mainContent .select input{
+    width:16px;
+    height:16px;
+    vertical-align:-3px;
+    margin-left:25px;
+}
+#mainContent .select i{
+    font-size:16px;
+    color: #ffccff;
+    margin:0 20px 0 5px;
+}
+
+#mainContent .tip{
+    display: inline-block;
+    margin-top: 10px;
+    width: 400px;
+    color: #dd79dd;
+    text-align: center;
+    text-decoration: underline;
+}
+#mainContent .btn{
+    width:400px;
+    height:140px;
+    line-height:140px;
+    text-align:center;
+}
+#mainContent .btn button{
+    font-size:25px;
+    width:100px;
+    height:100px;
+    cursor:pointer;
+    border-radius:50%;
+    border:none;
+    color:#5353c6;
+    font-weight:bold;
+    background-image:linear-gradient(135deg,#ffccff,#8a8fff);
+    transition:0.3s;
+}
+#mainContent .btn button:hover{
+    width:150px;
+    border-radius:50px;
+    background-image:linear-gradient(135deg,#ffccff,#8a8fff);
+    
+}
+#mainContent .ewm{
+    position: relative;
+    width:400px;
+}
+#mainContent .ewm i{
+    color:#0000b3;
+    font-size:25px;
+    height:30px;
+    line-height:30px;
+    margin-right:5px;
+    cursor:pointer;
+}
+#mainContent .ewm img{
+    position: absolute;
+    /* display: none; */
+    width: 200px;
+    height: 200px;
+    top: -330px;
+    left: 50%;
+    opacity: 0;
+    margin-left: -100px;
+    transition: all 0.3s;
+    z-index: -1;
+}
+
+#mainContent .ewm i:hover+img{
+    opacity: 1;
+    z-index: 1;
+}
