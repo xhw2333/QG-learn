@@ -42,7 +42,7 @@ lgPassword.oninput= function() {
     }
 }
 
-lgBtn.onclick = function () {
+lgBtn.onmouseover = function () {
     if(lgUsername.value == null || lgUsername.value == "") {
         passage.innerHTML=("请输入用户名!!");
     } else if(lgPassword.value == null || lgPassword.value == "") {

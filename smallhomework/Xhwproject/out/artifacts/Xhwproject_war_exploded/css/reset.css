@@ -34,6 +34,11 @@ img {
     /* eg.div引入img下端会有空隙，加这就不会 */
 }
 
+textarea {
+    resize: none;
+    outline: none;
+}
+
 .layer {
     width:1200px;
     margin:0 auto;

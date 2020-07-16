@@ -1,11 +1,9 @@
 
-//轮播图左右按钮及图
-var turn = document.getElementById("lunbo");
-var lBtn = document.getElementById("leftBtn");
-var rBtn = document.getElementById("rightBtn");
+//获取link标签
+var link = document.getElementById('link');
 
-//轮播图对应的点
-var point = document.getElementById("circleBox").getElementsByTagName('li');
+//获取主题切换选项
+var theme = document.getElementById('dropdown').getElementsByTagName('li');
 
 //获取签到按钮
 var record = document.getElementById("record");
@@ -21,7 +19,7 @@ var lBtn2 = document.getElementById("lBtn");
 var rBtn2 = document.getElementById("rBtn");
 
 // //获取body
-var body = document.getElementsByTagName("body");
+// var body = document.getElementsByTagName("body");
 
 //获取个人日志的每个按钮
 var show = document.getElementById("all").getElementsByTagName("em");
@@ -29,18 +27,22 @@ var show = document.getElementById("all").getElementsByTagName("em");
 //获取个人日志的内容
 var diary = document.getElementById("all").getElementsByTagName("ul");
 
+//获取日志添加
+var up = document.getElementById("up");
+
+//获取日志添加画面
+var add = document.getElementById("add");
 
 //接收时间返回的值
 var timer;
 
-//point的长度赋给length
-var length = point.length ;
-
 //对应签到次数
 var count = 0;
+//签到状态
+var state = true;
 
-//num对应轮播图
-var num = 1;
+//对应主题
+var numb = 1;
 
 //获取登录块
 var mylogin = document.getElementById("mylogin");
@@ -50,6 +52,7 @@ var Uname = document.getElementById("Uname");
 
 //用户数据
 var u = sessionStorage.getItem("user");
+
 if(u != null) {
     Uname.innerHTML = u;
 }
@@ -70,6 +73,28 @@ setInterval (function(){
     }
 },1);
 
+//主题切换两个页面保证主题一样
+var color = sessionStorage.getItem("color");
+
+if(!isNaN(parseInt(color))){
+    numb = parseInt(color);
+}
+
+link.href = 'css/qgspace' + numb + '.css';
+
+sessionStorage.setItem("color",numb);
+
+
+//主题切换
+for(var i = 0, len = theme.length; i < len; i++){
+    theme[i].index = i;
+    theme[i].onclick = function () {
+        numb = this.index + 1;
+        link.href = 'css/qgspace' + numb + '.css';
+        sessionStorage.setItem("color",numb);
+    }
+}
+
 
 
 // 时间显示
@@ -77,26 +102,29 @@ setInterval(function() {
     document.getElementById("time").innerHTML = new Date().toLocaleTimeString();
 },1000);
 
+//隔天更新签到状态
+setInterval(function () {
+    //获取当前时间小时
+    var hour = new Date().getHours();
+    //获取当前时间分钟
+    var min = new Date().getMinutes();
+    //获取当前秒
+    var second = new Date().getSeconds();
+    if(hour == 0){
+        if(min == 0 && second == 0)
+        state = true;
+    }
+},1000);
 
 //签到次数
 record.onclick = function() {
-    count++;
-    document.getElementById("pane").innerHTML = count;
-}
-
-
-/* 轮播图 */
-
-// 自动播放
-function play() {
-    timer = setInterval(function(){
-        rBtn.onclick();
-    },3000);
-}
-
-//停止播放
-function stop() {
-    clearInterval(timer);
+    if(state == true){
+        count++;
+        document.getElementById("pane").innerHTML = count;
+        state = false;
+    } else if(state == false){
+        alert("已签到");
+    }
 }
 
 //清除class
@@ -105,48 +133,6 @@ function clearName(a){
         a[i].className = "";
     }
 }
-
-// 点击左箭头换图
-lBtn.onclick = function(){
-    num--;
-    if(num == 0){
-        num = length;
-    }
-    turn.src= "images/man" + num + ".jpg";
-    clearName(point);
-    point[num-1].className = "active";
-}
-
-// 点击右箭头换图
-rBtn.onclick = function(){
-    num++;
-    if(num == length + 1){
-        num = 1;
-    }
-    turn.src="images/man"+num+".jpg";
-    clearName(point);
-    point[num-1].className = "active";
-}
-
-//点来切图
-for(var i = 0; i < length; i++){
-    point[i].index = i;
-    point[i].onclick = function(){
-        num = this.index + 1;
-        turn.src = "images/man" + num + ".jpg";
-        clearName(point);
-        point[num - 1].className = "active";
-    }
-}
- 
-//鼠标移上去，触发自动切换事件
-lunbo.onmouseover = stop;
-lunbo.onmouseout = play;
-
-//自动播放
-play();
-
-/* */
 
 
 //公告栏标签页切换
@@ -180,6 +166,10 @@ rBtn2.onclick = function(){
     page[0].className = "disappear";
 }
 
+up.onclick = function () {
+    add.style.display = "block";
+}
+
 //展开和收起日志
 for(var i = 0, len = show.length; i < len; i++){
     show[i].index = i;
@@ -201,7 +191,6 @@ window.onload = function(){
     var imgs = document.querySelectorAll('img');
 
 
-
     // 获取到浏览器顶部的距离
     function getTop(e){
         return e.offsetTop;
@@ -220,8 +209,6 @@ window.onload = function(){
                 // 1秒后执行
                 (function(i){
                     setTimeout(function(){
-                        //判断是否已加载
-                        // if(imgs[i].src == null ) {
                             // 隐形加载图片或其他资源，
                             //创建一个临时图片，这个图片在内存中不会到页面上去。实现隐形加载
                             var temp = new Image();
@@ -229,8 +216,6 @@ window.onload = function(){
                             temp.src = imgs[i].getAttribute('data-src');
                             // onload判断图片加载完毕，真是图片加载完毕，再赋值给dom节点
                             temp.onload = function () {
-                                //适配轮播图
-
                                 // 获取自定义属性data-src，用真图片替换假图片
                                 imgs[i].src = imgs[i].getAttribute('data-src');
                             }
@@ -245,10 +230,6 @@ window.onload = function(){
     // 滚屏函数
     window.onscroll =function(){
         lazyload(imgs);
-        //防止轮播图与点出现不对应
-        num = 1;
-        clearName(point);
-        point[num-1].className = "active";
     }
 }
 

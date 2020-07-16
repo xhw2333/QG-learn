@@ -405,6 +405,13 @@
       "unicode_decimal": 58969
     },
     {
+      "icon_id": "12548884",
+      "name": "后退",
+      "font_class": "houtui",
+      "unicode": "e614",
+      "unicode_decimal": 58900
+    },
+    {
       "icon_id": "12906058",
       "name": "会话",
       "font_class": "huihua",
@@ -508,6 +515,13 @@
       "font_class": "rili1",
       "unicode": "e647",
       "unicode_decimal": 58951
+    },
+    {
+      "icon_id": "14599428",
+      "name": "后退",
+      "font_class": "houtui1",
+      "unicode": "e68c",
+      "unicode_decimal": 59020
     }
   ]
 }

@@ -24,50 +24,21 @@
     width: 100%;
     height: 45px;
     line-height: 45px;
-    background-color: #f1ddf1;
-    z-index: 1;
+    background-color: #b9fc75;
+    z-index: 10;
     /* #ebbfeb */
 }
 
 #headMessage .title a {
     
     /* font-size: 25px; */
-    color: #cf16cf;
+    color: #336633;
 }
 
 #headMessage .user img {
     width: 35px;
     height: 35px;
     border-radius: 50%;
-}
-
-#headMessage .user .search {
-    margin-right: 20px;
-}
-
-#headMessage .user .search .thing {
-    height: 20px;
-    width: 200px;
-    text-indent: 4px;
-    vertical-align: middle;
-    border: none;
-    border-radius: 5px 0 0 5px;
-    border: 2px solid #cf16cf;
-}
-
-#headMessage .user .search .btn {
-
-    width: 24px;
-    height: 24px;
-    margin-left: -7px;
-    line-height: 24px;
-    text-align: center;
-    vertical-align: middle;
-    color: #fff;
-    background-color: #cf16cf;
-    border: none;
-    border-radius: 0 5px 5px 0;
-    
 }
 
 #headMessage .user a {
@@ -83,7 +54,7 @@
 #headMessage .list li:hover i,
 #headMessage .list li:hover span,
 #headMessage .user a:hover {
-    color: #cf16cf;
+    color: #ca0c16;
     cursor: pointer;
 }
 
@@ -93,7 +64,7 @@
 
 #headMessage .list li {
     float: left;
-    margin: 0 4px;
+    margin: 0 5px;
     font-size: 14px;
 }
 
@@ -162,7 +133,6 @@
 
 #headMessage .list .item7 .dropdown2 li {
     margin: 0;
-    font-size: 16px;
     width: 100%;
     height: 30px;
     line-height: 30px;
@@ -200,15 +170,15 @@
     font-size: 30px;
     font-weight: bold;
     text-align: left;
-    color: #db30db;
+    color: #099929;
 }
 
 #headPic .picture .welcome i {
-    color: #db30db;
+    color: #099929;
 }
 #headPic .picture .say {
     text-align: center;
-    color: #db30db;
+    color: #099929;
     height: 90px;
     line-height: 90px;
     font-size: 35px;
@@ -236,7 +206,7 @@
 /* 导航栏 */
 #headPic .nav {
     /* #b410b4; */
-    background-color: rgba(227, 105, 227, 0.6);
+    background-color: rgba(151, 233, 69, 0.6);
     /* background-image: linear-gradient(to right,#c41ec4,#e7a6e7); */
 }
 
@@ -247,7 +217,7 @@
     text-align: center;
     color: #fff;
     font-size: 20px;
-    background-color: rgba(128, 7, 128,0.6);
+    background-color: rgba(51, 102, 51, 0.6);
 }
 
 #headPic .nav ul {
@@ -279,10 +249,11 @@
 #headPic .nav ul li a:hover span,
 #headPic .nav ul li a:hover {
     font-weight: bold;
-    color: #800780;
-    background-color: #db30db;
+    color: #333;
+    background-color: #ccff99;
 }
 
+#headPic .nav ul .differ a::before,
 #headPic .nav ul li a:hover::before {
     content: '';
     position: absolute;
@@ -310,7 +281,7 @@
     width: 200px;
     padding: 5px 0;
     background-color: #f5f5f5;
-    border: 1px solid #800780;
+    border: 1px solid #49b849;
     border-top: none;
     box-sizing: border-box;
 }
@@ -333,23 +304,23 @@
     font-size: 14px;
     font-weight: bold;
     margin-left: 5px;
-    color: #800780;
+    color: #49b849;
 
 }
 #firstScreen .sidebar li span {
     font-size: 14px;
     font-weight: bold;
     margin-right: 5px;
-    color: #800780;
+    color:#49b849;
 }
 
 #firstScreen .sidebar li:hover {
-    background-color: #f1ddf1;
+    background-color: #ccff99;
     cursor: pointer;
    
 }
 #firstScreen .sidebar li:hover i {
-    color: #db30db;
+    color: #ca0c16;
 }
 #firstScreen .sidebar li i:hover {
     text-decoration: underline;
@@ -367,7 +338,7 @@
     /* height: 142px; */
     padding: 4px 0;
     background-color: #f5f5f5;
-    border: 1px solid #800780;
+    border: 1px solid #49b849;
     border-top: none;
     border-left: none;
     opacity: 0;
@@ -393,7 +364,7 @@
 #firstScreen .sidebar .item4:hover .menu4,
 #firstScreen .sidebar .item5:hover .menu5 {
     opacity: 1;
-    z-index: 1;;
+    z-index: 2;
 } 
 
 #firstScreen .sidebar li .menu1 i {
@@ -402,7 +373,7 @@
 
 #firstScreen .sidebar li .menu1 li:hover i,
 #firstScreen .sidebar li ol li:hover {
-    color: #db30db;
+    color: #ca0c16;
 }
 
 #firstScreen .sidebar .item1 .menu1 .sonmenu {
@@ -413,7 +384,7 @@
     padding: 5px 0;
     /* height: 100px; */
     background-color: #f5f5f5;
-    border: 1px solid #800780;
+    border: 1px solid #49b849;
     border-top: none;
     border-left: none;
     opacity: 0;
@@ -423,7 +394,7 @@
 
 #firstScreen .sidebar .item1 .menu1 .selected:hover .sonmenu {
     opacity: 1;
-    z-index: 1;
+    z-index: 2;
 }
 
 /* 右边栏 */
@@ -441,88 +412,110 @@
 #firstScreen .rightside .picbox .title {
     padding-bottom: 2px;
     margin-bottom: 5px;
-    width: 100%;
-    border-bottom: 2px solid #800780; 
+    width: 700px;
+    border-bottom: 2px solid #336633;
 }
 
 #firstScreen .rightside .picbox .title span {
     font-size: 16px;
-    color: #d510d5;
+    color: #47b847;
 }
 
-#firstScreen .rightside .picbox .title i {
+#firstScreen .rightside .picbox .title a {
     margin: 4px 2px 0 0;
     font-size: 14px;
+    font-weight: bold;
     color: #3c3c3c;
 }
 
-#firstScreen .rightside .picbox img {
+#firstScreen .rightside .picbox .title a:hover {
+    color: #ca0c16;
+    background-color: #fff5ef;
+}
+
+
+#firstScreen .rightside .picbox .door {
+    position: absolute;
     width: 700px;
-    height: 398px;
-    /* margin-top: 10px;
-    margin-left: 10px; */
-}
-
-
-#firstScreen .rightside .picbox  button {
-    position: absolute;
-    display: none;
-    top: 50%;
-    width: 40px;
-    height: 40px;
-    line-height: 30px;
+    height: 395px;
+    line-height: 395px;
     text-align: center;
-    font-size: 16px;
-    color: #fff;
-    transform: translate(0,-50%);
-    background-color: rgba(0,0,0,0.5);
-    border: none;
-    border-radius: 50%;
-}
-#firstScreen .rightside .picbox .lbtn {
-    left: 0;
+    background: url(../images/pic.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #fff5ef;
+    perspective: 1000px;
+    z-index: 1;
 }
 
-#firstScreen .rightside .picbox .rbtn {
-    right: 0;
+#firstScreen .rightside .picbox .door a {
+    font-size: 20px;
     font-weight: bold;
+    color: #336633;
 }
 
-#firstScreen .rightside .picbox:hover button {
-    display: block;
+#firstScreen .rightside .picbox .door a:hover {
+    color: #e60f0f;
 }
 
-#firstScreen .rightside .picbox .circle {
+#firstScreen .rightside .picbox .door li {
     position: absolute;
-    width: 78px;
-    height: 22px;
-    bottom: 10px;
-    left: 50%;
-    padding: 2px 5px;
-    background-color: rgba(0,0,0,0.5);
-    border-radius: 10px;
-    transform: translateX(-50%);
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background-color: #97e945;
+    transition: all 1s;
+    border: 1px solid #3c3c3c;
     box-sizing: border-box;
 }
 
-#firstScreen .rightside .picbox .circle li {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: #fff;
+#firstScreen .rightside .picbox ul .ldoor {
+    left: 0;
+    transform-origin: left;
 }
 
-#firstScreen .rightside .picbox .circle .active {
-    background-color: #d50ad5;
+#firstScreen .rightside .picbox ul .rdoor {
+    right: 0;
+    transform-origin: right;
 }
- 
+
+#firstScreen .rightside .picbox ul .rdoor::before,
+#firstScreen .rightside .picbox ul .ldoor::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #3c3c3c;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+
+#firstScreen .rightside .picbox ul .ldoor::before {
+    right: 5px;
+}
+
+#firstScreen .rightside .picbox ul .rdoor::before {
+    left: 5px;
+}
+
+#firstScreen .rightside .picbox ul:hover .ldoor {
+    transform: rotateY(-120deg);
+    width: 20%;
+}
+
+#firstScreen .rightside .picbox ul:hover .rdoor {
+    transform: rotateY(120deg);
+    width: 20%;
+}
+
+
 /* 公告 */
 #firstScreen .rightside .notice {
     width: 270px;
     height: 426px;
     margin-top: 5px;
-    background-color: #fae8f3;
+    background-color: #d0fca3;
 }
 
 #firstScreen .rightside .notice .picwrapper {
@@ -571,7 +564,7 @@
      flex: 4;
      font-size: 25px;
      text-align: center;
-     background-color: #e118e1;
+     background-color: #97e945;
      border-radius: 5px;
      background-image: linear-gradient(90deg, rgba(3, 168, 244, 0.5), rgba(165, 32, 107, 0.5), rgba(248, 224, 6, 0.5), rgba(3, 168, 244, 0.5));
      background-size: 400%;
@@ -632,19 +625,19 @@
  }
 
 #firstScreen .rightside .notice .record .count p {
-     color: #800780;
+     color: #336633;
  }
 
 #firstScreen .rightside .notice .record .count p span {
      font-size: 25px;
-     color: #800780;
+     color: #336633;
  }
 
 #firstScreen .rightside .notice .tips {
     display: flex;
     height: 50px;
     justify-content: space-around;
-    border-top: 2px solid #800780;
+    border-top: 2px solid #336633;
     box-sizing: border-box;
 }
 
@@ -652,7 +645,7 @@
     width: 20%;
     margin: 10px;
     /* background-color: #800780; */
-    color: #800780;
+    color: #336633;
     font-size: 18px;
     text-align: center;
     line-height: 28px;
@@ -667,8 +660,8 @@
 
 #firstScreen .rightside .notice .tips li.special {
     font-weight: bold;
-    border-bottom: 2px solid #800780;
-    background-color: rgba(207, 22, 207, 0.1);
+    border-bottom: 2px solid #336633;
+    background-color: rgba(123, 230, 17, 0.6);
 }
 
 
@@ -702,7 +695,7 @@
 
 /* 第二屏内容 */
 #secondScreen {
-    margin-top: 10px;
+    margin-top: 30px;
 }
 
 /* 日志 */
@@ -712,13 +705,43 @@
     background-color: #f8f8f8;
 }
 
-#secondScreen .diary h3 {
+#secondScreen .diary .search h3 {
+    margin-right: 532px;
+    color: #336633;
+}
+
+
+#secondScreen .diary .search {
     height: 35px;
     line-height: 35px;
     padding-left: 5px;
-    color: #800780;
-    background-image: linear-gradient(to bottom,#e753c2,#e997e2);
+    background-image: linear-gradient(to bottom,#64be0a,#97e945);
     border-radius: 5px 5px 0 0;
+}
+
+#secondScreen .diary .search .thing {
+    height: 20px;
+    width: 200px;
+    text-indent: 4px;
+    vertical-align: middle;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    border: 2px solid #336633;
+}
+
+#secondScreen .diary .search .btn {
+
+    width: 24px;
+    height: 24px;
+    margin-left: -7px;
+    line-height: 24px;
+    text-align: center;
+    vertical-align: middle;
+    color: #fff;
+    background-color: #336633;
+    border: none;
+    border-radius: 0 5px 5px 0;
+
 }
 
 #secondScreen .diary .notice {
@@ -726,7 +749,7 @@
     font-size: 14px;
     line-height: 20px;
     padding-left: 5px;
-    background-image: linear-gradient(to top,#e753c2,#e997e2);
+    background-image: linear-gradient(to top,#64be0a,#97e945);
 }
 
 #secondScreen .diary .notice span {
@@ -736,13 +759,30 @@
 
 #secondScreen .diary .notice i{
     font-size: 20px;
-    color: #790680;
+    color: #336633;
     margin-right: 10px;
 }
 
 #secondScreen .diary .notice i:hover{
     color: #fff;
     cursor: pointer;
+}
+
+#secondScreen .diary .add {
+    padding: 10px 5px;
+    display: none;
+}
+
+#secondScreen .diary .add li {
+    margin: 10px 10px;
+    font-weight: bold;
+    height: 50px;
+    line-height: 50px;
+}
+
+#secondScreen .diary .add .article {
+    height: auto;
+    line-height: normal;
 }
 
 #secondScreen .diary .all {
@@ -752,9 +792,9 @@
 #secondScreen .diary .all h4 {
     padding: 5px;
     margin-top: 15px;
-    color: #cf16cf;
+    color: #099929;
     font-size: 18px;
-    border-bottom: 1px dashed #cf16cf;
+    border-bottom: 1px dashed #099929;
 }
 
 #Content {
@@ -797,7 +837,7 @@
     padding: 2px 10px;
     color: #fff;
     font-size: 14px;
-    background-color: #e118e1;
+    background-color: #099929;
     border-radius: 50px;
 }
 
@@ -832,7 +872,7 @@
 #secondScreen .rightbox {
     /* height: 883px; */
     width: 335px;
-    border: 1px solid #d019d0;
+    border: 1px solid #49b849;
     box-sizing: border-box;
 }
 
@@ -841,7 +881,7 @@
     /* margin-bottom: 5px; */
     padding: 5px 5px;
     color: #fff;
-    background-image: linear-gradient(to right,#d019d0,#e581dd);
+    background-image: linear-gradient(to right,#64be0a,#97e945);
     box-sizing: border-box;
 }
 
@@ -902,7 +942,7 @@
 
 #secondScreen .rightbox .list > li:hover {
     margin: 7px;
-    color: #e252e2;
+    color: #97e945;
     box-shadow: none;
     cursor: pointer;
 }
@@ -935,7 +975,7 @@
     height: 100%;
     line-height: 50px;
     font-size: 22px;
-    background-image: linear-gradient(135deg,#d019d0,#e581dd);
+    background-image: linear-gradient(to right,#64be0a,#97e945);
     text-align: center;
     color: #dce9dc;
     cursor: pointer;
@@ -1028,7 +1068,7 @@
 }
 
 #secondScreen .rightbox .chart li:hover {
-    background-color: #f1b4f1;
+    background-color: #b9fc75;
 }
 
 #secondScreen .rightbox .title5 {
@@ -1227,7 +1267,7 @@
 #tool p span {
     font-size: 25px;
     font-weight: bold;
-    color: #800780;
+    color: #336633;
     line-height: 50px;
 }
 
@@ -1251,7 +1291,7 @@
     width: 50px;
     height: 50px;
     font-size: 25px;
-    color: #800780;
+    color: #336633;
     text-align: center;
     line-height: 50px;
     border-top: 1px solid #b49797;
@@ -1262,24 +1302,26 @@
 #tool p:hover {
     font-weight: bold;
     /* color: #800780; */
-    background-color: #cf16cf;
+    background-color: #a9e86b;
     cursor: pointer;
 }
 
 #tool p:hover span{
     opacity: 0;
 }
-#tool p:hover i{
+#tool p:hover i {
     opacity: 1;
     z-index: 2;
 }
+
 #tool a:hover {
     font-weight: bold;
-    color: #800780;
-    background-color: #cf16cf;
+    color: #336633;
+    background-color: #a9e86b;
 }
-#tool p i:hover{
-    color: #f0e1f1;
+
+#tool p i:hover {
+    color: #e95a62;
     text-decoration: underline;
 }
 
@@ -1322,7 +1364,7 @@
 body {
     animation: bubble 20s linear infinite;
     background-image: url(../images/bubble1.png), url(../images/bubble2.png), url(../images/bubble3.png);
-    background-color: rgb(250, 248, 250,0.8);
+    background-color: rgba(250, 248, 250, 0.8);
 }
 @keyframes bubble {
     0% {

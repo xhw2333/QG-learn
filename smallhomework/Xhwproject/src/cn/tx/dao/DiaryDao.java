@@ -158,7 +158,7 @@ public class DiaryDao {
 
         //测试
         public static void main(String[] args) {
-            String str = "2020-01-15";
+            String str = "2020-05-13";
             SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
             Date date = null;
             List<Diary> list = new ArrayList<Diary>();
@@ -168,10 +168,10 @@ public class DiaryDao {
                 e.printStackTrace();
             }
             Diary diary = new Diary();
-            diary.setTitle("水煮鱼");
-            diary.setTab("美食");
+            diary.setTitle("新杯子");
+            diary.setTab("其它");
             diary.setDate(date);
-            diary.setText("水煮鱼，很可以，“油而不腻、辣而不燥、麻而不苦、肉质滑嫩”。");
+            diary.setText("今天买了个新杯子，挺好用、耐用。");
             mwrite(diary);
 
             diary = mysearch("数据结构和算法");

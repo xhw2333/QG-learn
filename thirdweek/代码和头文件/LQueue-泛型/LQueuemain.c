@@ -7,8 +7,8 @@ int main(){
 	int i, n;
 	void *data, *e;
 	Q = NULL;
-	data = (void*)malloc(10);
-	e = (void*)malloc(10);
+	data = (void*)malloc(30);
+	e = (void*)malloc(30);
 	do{
 		menu();
 		printf("\n\n请输入指令：");
@@ -27,7 +27,7 @@ int main(){
 				n = GetHeadLQueue(Q, e);
 				if(n == 1){
 					printf("\n队头元素为：");
-					APrint(e, Q->datatype[0]);
+					APrint(e, Q->datatype[head]);
 				}
 				else{
 					printf("\nNONE");

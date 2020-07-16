@@ -22,8 +22,11 @@ typedef enum
 } Status;
 char type;					
 	
-int num = 0;
-int num1 = 0;		
+	
+//方便实现泛型	
+int num = 0;		 
+int head = 0;    
+
 void menu();
 int select();
 void InitLQueue(LQueue **Q);
@@ -35,8 +38,7 @@ Status EnLQueue(LQueue *Q, void *data);
 Status DeLQueue(LQueue *Q);
 void ClearLQueue(LQueue *Q);
 Status TraverseLQueue(const LQueue *Q, void (*foo)(void *q, char type));
-void LPrint(void *q, char type);
-
+void APrint(void *q, char type);
 
 
 

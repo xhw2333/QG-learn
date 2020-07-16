@@ -3,29 +3,7 @@
 #include<stdlib.h>
 #include<string.h> 
 
-//typedef struct node
-//{
-//    void *data;                   //数据域指针
-//    struct node *next;            //指向当前结点的下一结点
-//} Node;
-//
-//typedef struct Lqueue
-//{
-//    Node *front;                   //队头
-//    Node *rear;                    //队尾
-//    int length;            //队列长度
-//    char datatype[30];    //存放数据类型 
-//} LQueue;
-//
-//typedef enum
-//{
-//    FALSE=0, TRUE=1
-//} Status;
-//char type;
-//int num = 0;					
-			
-
-
+								
 
 //菜单 
 void menu()
@@ -60,7 +38,7 @@ void InitLQueue(LQueue **Q){
 	
 	Node *p;
 	p = (Node*)malloc(sizeof(Node));
-	(*Q) = (LQueue*)malloc(sizeof(LQueue));
+	(*Q)= (LQueue*)malloc(sizeof(LQueue));
 	if(p == NULL){
 		printf("申请内存空间失败\n");
 		return;
@@ -143,13 +121,13 @@ Status EnLQueue(LQueue *Q, void *data){
 		return FALSE;
 	}
 	Node *p = (Node*)malloc(sizeof(Node));
-	if(p== NULL){
+	if(p == NULL){
 		printf("申请内存空间失败\n");
 		return FALSE;
 	}
 	p->data = (void*)malloc(sizeof(Q->length));
 
-	memcpy(p->data, data, Q->length);
+	memcpy(p->data, data, Q->length);	
 	p->next = NULL;
 	Q->rear->next = p;
 	Q->rear = p;            //指向队尾 
@@ -184,7 +162,7 @@ void SelectType(LQueue *Q){
 			break;
 		}
 		case 2: {
-			char a ;
+			char a;
 			getchar();
 			scanf("%c", &a);
 			Q->datatype[num]='c';
@@ -199,7 +177,7 @@ void SelectType(LQueue *Q){
 			break;
 		}
         case 4:{
-			char a[10];
+			char a[30];
 			scanf("%s", a);
 			Q->datatype[num]='s';
 			EnLQueue(Q, a);
@@ -223,9 +201,10 @@ Status DeLQueue(LQueue *Q){
 	Node *p = (Node*)malloc(sizeof(Node));
 	p = Q->front->next;
 	Q->front->next = p->next;
-	if(Q->front->next = NULL){
+	if(Q->rear == p){
 		Q->rear = Q->front;
-	}
+	} 
+	head++;
 	free(p);
 	printf("\n出队成功\n");
 	return TRUE;
@@ -251,6 +230,7 @@ void ClearLQueue(LQueue *Q){
 		free(q);
 	}
 	num = 0;
+	head = 0;
 	free(p);
 	printf("\n已清空\n"); 
 }
@@ -268,13 +248,17 @@ Status TraverseLQueue(const LQueue *Q, void (*foo)(void *q, char type)){
 	}
 	Node *p = (void*)malloc(sizeof(Q->length));
 	p = Q->front->next;
-	int i = 0;
-	printf("\n队列元素为："); 
+	int i = head;
+	if(p == NULL){
+		printf("NO\n");
+	} else {
+		printf("\n队列元素为："); 
+	}
 	while(p != NULL ){
 		foo(p->data,Q->datatype[i]);
 		p = p->next;
 		i++;
-			printf("\n"); 
+//			printf("\n"); 
 	}
 	printf("\n");
 	return TRUE;

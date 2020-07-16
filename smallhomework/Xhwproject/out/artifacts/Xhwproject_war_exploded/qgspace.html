@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>qgspace</title>
-    <link rel="stylesheet" href="css/qgspace.css">
+    <link id="link" rel="stylesheet" href="css/qgspace1.css">
+    <link rel="stylesheet" href="css/reset.css">
 </head>
 <body>
     <audio id="music" src="music/kanong.mp3" loop="loop" autoplay="autoplay"></audio>
@@ -12,16 +13,10 @@
         <div class="head layer clearfix">
             <h1 class="title fl">
                 <a href="qgspace.html">
-                    QG空间
+                    MY空间
                 </a> 
             </h1>
             <div class="user fr">
-                <div class="search fl">
-<!--                    <form action="">-->
-                        <input type="text" class="thing" id="search" name="key" autocomplete="off" placeholder="请输入你想搜索的内容">
-                        <input type="submit" id="submit" class="iconfont btn" value="&#xe65a;">
-<!--                    </form>-->
-                </div>
                 <img data-src="images/head.png" alt="logining">
                 <span>
                     <a id="mylogin" href="login.html">
@@ -37,11 +32,13 @@
             </div>
             <ul class="list clearfix">
                 <li class="item1">
-                    <span class="iconfont">&#xe60e;</span>
-                    <i>主页</i> 
+                    <a href="qgspace.html">
+                        <span class="iconfont">&#xe60e;</span>
+                        <i>我的主页</i>
+                    </a>
                 </li>
                 <li class="item2">
-                    <a href="#personPic">
+                    <a href="qgpic.html">
                         <span class="iconfont">&#xe680;</span>
                         <i>个人相册</i>
                     </a>
@@ -55,7 +52,7 @@
                 <li class="item4">
                     <a href="#secondScreen">
                         <span class="iconfont">&#xe633;</span>
-                        <i>好友</i>
+                        <i>我的好友</i>
                     </a>
                 </li>
                 <li class="item5">
@@ -68,11 +65,10 @@
                     <span class="iconfont">&#xe69b;</span>
                     <i>主题</i>
                     <em class="iconfont">&#xe60b;</em>
-                    <ol class="dropdown1">  
+                    <ol id="dropdown" class="dropdown1">
                         <li>少女粉</li>
-                        <li>黑夜</li>
-                        <li>海洋蓝</li>
                         <li>早苗绿</li>
+                        <li>海洋蓝</li>
                     </ol>
                 </li>
                 <li class="item7">
@@ -104,11 +100,11 @@
                 <div class="layer clearfix">
                     <h2 class="fl">我的空间</h2>
                     <ul class="clearfix">
-                        <li>
+                        <li class="differ">
                             <a href="#">主页</a> 
                         </li>
                         <li>
-                            <a href="#personPic">相册</a>
+                            <a href="qgpic.html">相册</a>
                         </li>
                         <li>
                             <a href="#secondScreen">日志</a>
@@ -217,7 +213,7 @@
                 </ol>
             </li>
             <li>
-                <em class="iconfont fl">&#xe607;</em>
+                <em class="iconfont fl">&#xe608;</em>
                 <i>与我相关</i>
             </li>
             <li>
@@ -241,42 +237,24 @@
                 <i>技术大咖分享会</i>
             </li>
             <li>
-                <em class="iconfont fl">&#xe608;</em>
+                <em class="iconfont fl">&#xe609;</em>
                 <i>网友交流会</i>
             </li>
-            <!--
-            <li>
-                <em class="iconfont fl">&#xe654;</em>
-                <i>计算机考证</i>
-            </li>
-            <li>
-                <em class="iconfont fl">&#xe67f;</em>
-                <i>考研必看</i>
-            </li>
-            <li>
-                <em class="iconfont fl">&#xe67e;</em>
-                <i>公务员考试</i>
-            </li> -->
         </ul>
         <!-- 右边栏 -->
         <div id="personPic" class="rightside fr">
             <!-- 图片容器 -->
-            <div class="picbox fl">
+            <div id="turnBox" class="picbox fl">
                 <p class="clearfix title">
                     <span class="fl iconfont">
                         &#xe600;个人相册
                     </span>
-                    <i class="fr">+</i>
+                    <a href="qgpic.html" class="fr">更多>></a>
                 </p>
-                <img id="lunbo" data-src="images/man1.jpg" alt="logining">
-                <button id="leftBtn" class="iconfont lbtn">&#xe501;</button>
-                <button id="rightBtn" class="iconfont rbtn">&#xe502;</button>
-                <ul id="circleBox" class="circle">
-                    <li class="active"></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                <ul class="door">
+                    <a href="qgpic.html">点此进入个人相册吧</a>
+                    <li class="ldoor"></li>
+                    <li class="rdoor"></li>
                 </ul>
             </div>
             <!-- 公告 -->
@@ -285,8 +263,8 @@
                     <img class="photo1" data-src="images/read3.jpg" alt="logining">
                     <img class="photo2" data-src="images/read4.jpg" alt="logining">
                 </div>
-                <ul id="record" class="record">
-                    <li class="time">
+                <ul class="record">
+                    <li id="record" class="time">
                         <p id="time" class="line1"></p>
                         <p class="line2">签到</p>
                     </li>
@@ -330,11 +308,40 @@
     <div id="secondScreen" class="layer clearfix">
         <!-- 日志 -->
         <div class="fl diary">
-            <h3>个人日志</h3>
+            <div class="search clearfix">
+                <h3 class="fl">个人日志</h3>
+                <input type="text" class="thing" id="search" name="key" autocomplete="off" placeholder="请输入你想搜索的内容">
+                <input type="submit" id="submit" class="iconfont btn" value="&#xe65a;">
+            </div>
             <p class="notice clearfix">
                 <span class="fl iconfont">&#xe678; 记录生活,记录自己</span>
-                <i class="fr">+</i>
+                <i id="up" class="fr">添加日志+</i>
             </p>
+            <ul id="add" class="add">
+                <li>
+                    标题:<input id="title" type="text" name="title" autocomplete="off" placeholder="请输入标题">
+                </li>
+                <li>
+                    日期:<input id="date" type="date" name="date">
+                </li>
+                <li>
+                    标签:
+                    <select name="tab" id="tab">
+                        <option value="">学习</option>
+                        <option value="">美食</option>
+                        <option value="">赞助</option>
+                        <option value="">旅行</option>
+                        <option value="">其他</option>
+                    </select>
+                </li>
+                <li class="article" >
+                    内容:
+                    <textarea id="text" type="text" name="text" autocomplete="off" placeholder="请输入内容" cols="125" rows="10"></textarea>
+                </li>
+                <li>
+                    <input id="send" type="submit" value="提交">
+                </li>
+            </ul>
             <div id="all" class="all">
                 <h4 id="Sum">
                     搜索结果
@@ -527,6 +534,27 @@
                         <div>
                             我们这里新建了个公园，大家好像都想去瞧瞧，看个热闹。来到这后，空气很清新，令人心旷神怡，
                             许多小孩、老人都在这里玩耍、散步。
+                        </div>
+                        <ol class="clearfix">
+                            <li class="iconfont fl">&#xe506;</li>
+                            <li class="iconfont fl">&#xe602;</li>
+                            <li class="iconfont fl">&#xe65b;</li>
+                        </ol>
+                    </li>
+                </ul>
+                <h4>
+                    其它
+                    <em>收起</em>
+                </h4>
+                <ul class="other">
+                    <li>
+                        <h5>
+                            新杯子
+                            <span>其它</span>
+                        </h5>
+                        <i>2020-05-13</i>
+                        <div>
+                            今天买了个新杯子，挺好用、耐用。
                         </div>
                         <ol class="clearfix">
                             <li class="iconfont fl">&#xe506;</li>

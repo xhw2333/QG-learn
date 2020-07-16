@@ -114,7 +114,7 @@ Status EnLQueue(LQueue *Q, ElemType e){
 		return FALSE;
 	}
 	Node *p = (Node*)malloc(sizeof(Node));
-		if(p== NULL){
+	if(p == NULL){
 		printf("…Í«Îƒ⁄¥Êø’º‰ ß∞‹\n");
 		return FALSE;
 	}
