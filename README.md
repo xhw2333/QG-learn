@@ -1,5 +1,3 @@
 # QGtraining
 
-QG训练营
-
-QG暑期考核
+QG训练营、暑期考核
